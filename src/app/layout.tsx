@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,8 +13,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Karagir Mahakumbh 2026 - Registration",
-  description: "Register for the Karagir Mahakumbh 2026 Event",
+  title: "Karagir Mahakumbh 2026 - Official Registration",
+  description: "Secure your entry for the grand Karagir Mahakumbh 2026 event. Heritage, art, and craft celebration.",
+  keywords: ["Karagir", "Mahakumbh", "2026", "Registration", "Event", "Heritage", "Art", "Craft"],
+  authors: [{ name: "Karagir Team" }],
+  openGraph: {
+    title: "Karagir Mahakumbh 2026 Registration",
+    description: "Join us for the grand heritage event. Register now to get your entry pass.",
+    images: ["/karagir.jpeg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Karagir Mahakumbh 2026 Registration",
+    description: "Join us for the grand heritage event.",
+    images: ["/karagir.jpeg"],
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#8b2323",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
